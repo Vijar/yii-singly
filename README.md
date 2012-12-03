@@ -28,11 +28,15 @@ Still needs to be updated with better documentation
 
 * Now you can just do this to get login url
 
-  Yii::app()->singly->getSinglyAuthenticationUrl('facebook')
+
+		Yii::app()->singly->getSinglyAuthenticationUrl('facebook')
+
 
 * At your redirect uri 
+
+    
+		Yii::app()->singly->setAccessToken($_GET['code'])
   
-  Yii::app()->singly->setAccessToken($_GET['code'])
   
   will log your user in and keep the **Session** stored  
 
